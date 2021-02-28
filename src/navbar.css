@@ -1,0 +1,26 @@
+.navbar{
+    background-color: aquamarine;
+    padding:  32px;
+    max-width: 240px;
+    height: 100vh;
+   ;
+}
+
+img{
+    border-radius: 50%;
+}
+
+.navbar-liste{
+    list-style: none;
+    margin-top: 16px;
+}
+
+.reseaux{
+    list-style: none;
+    display: flex;
+}
+
+.reseaux li{
+    margin-right: 16px;
+    font-size: 2rem ;
+}
