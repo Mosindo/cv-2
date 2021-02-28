@@ -6,16 +6,25 @@ import Knowledge from './Views/Knowledge';
 import Portfolio from './Views/Portfolio';
 import NotFound from './Views/NotFound';
 import NavBar from './components/NavBar';
+import React, { useState } from "react";
+import * as MdIcon from 'react-icons/md';
 
 
 function App() {
+  const [navbarOpen, setNavbarOpen] = useState(true)
+  let execute=()=>{
+    setNavbarOpen({navbarOpen:!navbarOpen});
+  }
   return (
     <div className="container-fluid">
       <div className="row">
+      <MdIcon.MdClose onClick={execute} />
+      
       <Router >
+      { navbarOpen ?
         <div className="col navbar">
-          <NavBar/>
-        </div>
+         <NavBar/>
+        </div>:null}
         <div className="col">
         <Switch>
             <Route path='/' exact component={Home}/>
